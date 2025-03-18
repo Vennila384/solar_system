@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planets</title>
+        <link rel="stylesheet" type="text/css" href="planet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Changa:wght@200..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Henny+Penny&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Changa:wght@200..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Henny+Penny&family=League+Spartan:wght@100..900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <div id="planet">
+                <h2>THE PLANETS</h2>
+            </div>
+            <div id="planetNames">
+                <div id="planet1" class="planets" onclick="planetDetails(this)">
+                    <a href="/planet?planetName=mercury"><h4>MERCURY</h4></a>
+                </div>
+                <div id="planet2" class="planets" onclick="planetDetails(this)">
+                    <a href="/planet?planetName=venus"><h4>VENUS</h4></a>
+                </div>
+                <div id="planet3" class="planets" onclick="planetDetails(this)">
+                    <a href="/planet?planetName=earth"><h4>EARTH</h4></a>
+                </div>
+                <div id="planet4" class="planets" onclick="planetDetails(this)">
+                    <a href="/planet?planetName=mars"><h4>MARS</h4></a>
+                </div>
+                <div id="planet5" class="planets" onclick="planetDetails(this)">
+                    <a href="/planet?planetName=jupiter"><h4>JUPITER</h4></a>
+                </div>
+                <div id="planet6" class="planets" onclick="planetDetails(this)">
+                    <a href="/planet?planetName=saturn"><h4>SATURN</h4></a>
+                </div>
+                <div id="planet7" class="planets" onclick="planetDetails(this)">
+                    <a href="/planet?planetName=uranus"><h4>URANUS</h4></a>
+                </div>
+                <div id="planet8" class="planets" onclick="planetDetails(this)">
+                    <a href="/planet?planetName=neptune"><h4>NEPTUNE</h4></a>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div id="container1">
+                <div id="whole1">
+                    <% console.log(data.image) %>
+                    <img id="image" src= <%= data.image %> />
+                </div>
+                <div id="whole2">
+                    <div id="whole3">
+                        <h1><%=data.name%></h1>
+                    </div>
+                    <div id="whole4">
+                        <p><%=data.content%></p>
+                    </div>
+                    <div id="whole5">Source: <a target="_blank" href=<%=data.source%> >Wikipedia</a></div>
+                    <a href="/overview"><div id="whole6" class="buttons">01  OVERVIEW</div></a>
+                    <a href="/structure"><div id="whole7" class="buttons">02  INTERNAL STRUCTURE</div></a>
+                    <a href="/geology"><div id="whole8" class="buttons">03  SURFACE GEOLOGY</div></a>
+                </div>
+            </div>
+            <div id="container2">
+                <div id="whole9" class="box">
+                    <p class="para">ROTATION TIME</p>
+                    <h2 class="details"><%=data.rotation%></h2>
+                </div>
+                <div id="whole10" class="box">
+                    <p class="para">REVOLUTION TIME</p>
+                    <h2 class="details"><%=data.revolution%></h2>
+                </div>
+                <div id="whole11" class="box">
+                    <p class="para">RADIUS</p>
+                    <h2 class="details"><%=data.radius%></h2>
+                </div>
+                <div id="whole12" class="box">
+                    <p class="para">AVERAGE TEMP.</p>
+                    <h2 class="details"><%=data.temperature%></h2>
+                </div>
+            </div>
+            <!-- <p>HELLO WORLD</p> -->
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
